@@ -1,0 +1,440 @@
+/* =========================
+   Google Reset
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Poppins", sans-serif;
+
+    background: linear-gradient(-45deg,
+            #1f2937,
+            #2563eb,
+            #9333ea,
+            #0f766e);
+
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+
+    overflow-x: hidden;
+}
+
+@keyframes gradientMove {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+/* =========================
+   Main Card
+========================= */
+
+.card {
+
+    width: 95%;
+    max-width: 560px;
+
+    padding: 30px;
+
+    border-radius: 24px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, .25);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, .35);
+
+    text-align: center;
+}
+
+/* =========================
+   Heading
+========================= */
+
+h1 {
+
+    color: white;
+
+    font-size: 2.8rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+.subtitle {
+
+    color: rgba(255,255,255,.8);
+
+    margin-top: 8px;
+
+    margin-bottom: 25px;
+
+    font-size: .95rem;
+
+}
+
+/* =========================
+   Scoreboard
+========================= */
+
+.scoreboard {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+}
+
+.score {
+
+    flex: 1;
+
+    padding: 15px;
+
+    border-radius: 16px;
+
+    background: rgba(255,255,255,.15);
+
+    backdrop-filter: blur(10px);
+
+    transition: .3s;
+
+}
+
+.score:hover{
+
+    transform: translateY(-4px);
+
+}
+
+.score h3{
+
+    color:#ffffff;
+
+    margin-bottom:6px;
+
+}
+
+.score span{
+
+    font-size:1.8rem;
+
+    font-weight:700;
+
+    color:#FFD166;
+
+}
+
+/* =========================
+   Turn
+========================= */
+
+#turn-indicator{
+
+    color:white;
+
+    font-size:1.1rem;
+
+    margin-bottom:25px;
+
+    font-weight:500;
+
+}
+
+/* =========================
+   Game
+========================= */
+
+.container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.game{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:14px;
+
+}
+
+/* =========================
+   Boxes
+========================= */
+
+.box{
+
+    width:110px;
+
+    height:110px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:white;
+
+    font-size:3rem;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s ease;
+
+    box-shadow:0 12px 22px rgba(0,0,0,.22);
+
+}
+
+.box:hover{
+
+    transform:translateY(-6px) scale(1.05);
+
+    box-shadow:0 18px 30px rgba(0,0,0,.30);
+
+}
+
+.box:disabled{
+
+    cursor:default;
+
+}
+
+/* =========================
+   Winning Boxes
+========================= */
+
+.winner{
+
+    background:#10B981 !important;
+
+    color:white !important;
+
+    animation:winnerGlow .8s infinite alternate;
+
+}
+
+@keyframes winnerGlow{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.08);
+
+    }
+
+}
+
+/* =========================
+   Buttons
+========================= */
+
+.buttons{
+
+    margin-top:30px;
+
+}
+
+button{
+
+    font-family:inherit;
+
+}
+
+#reset,
+#new-btn{
+
+    padding:14px 32px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#reset{
+
+    background:#2563EB;
+
+    color:white;
+
+}
+
+#new-btn{
+
+    background:#10B981;
+
+    color:white;
+
+}
+
+#reset:hover,
+#new-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 18px rgba(0,0,0,.3);
+
+}
+
+/* =========================
+   Popup
+========================= */
+
+.popup{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.72);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    gap:25px;
+
+    animation:popup .4s ease;
+
+    z-index:100;
+
+}
+
+@keyframes popup{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+#msg{
+
+    color:white;
+
+    font-size:2.5rem;
+
+    text-align:center;
+
+}
+
+.hide{
+
+    display:none;
+
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media(max-width:600px){
+
+    .card{
+
+        padding:20px;
+
+    }
+
+    h1{
+
+        font-size:2rem;
+
+    }
+
+    .subtitle{
+
+        font-size:.85rem;
+
+    }
+
+    .box{
+
+        width:85px;
+
+        height:85px;
+
+        font-size:2.4rem;
+
+    }
+
+    .score span{
+
+        font-size:1.4rem;
+
+    }
+
+    #msg{
+
+        font-size:2rem;
+
+    }
+
+}

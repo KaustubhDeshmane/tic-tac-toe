@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tic Tac Toe | Kaustubh Deshmane</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Winner Popup -->
+
+    <div class="popup hide">
+
+        <h2 id="msg"></h2>
+
+        <button id="new-btn">
+            Play Again
+        </button>
+
+    </div>
+
+    <!-- Main Card -->
+
+    <div class="card">
+
+        <h1>Tic Tac Toe</h1>
+
+        <p class="subtitle">
+            Challenge your friend and be the winner!
+        </p>
+
+        <!-- Scoreboard -->
+
+        <div class="scoreboard">
+
+            <div class="score">
+                <h3>X</h3>
+                <span id="score-x">0</span>
+            </div>
+
+            <div class="score">
+                <h3>Draw</h3>
+                <span id="score-draw">0</span>
+            </div>
+
+            <div class="score">
+                <h3>O</h3>
+                <span id="score-o">0</span>
+            </div>
+
+        </div>
+
+        <!-- Turn -->
+
+        <h2 id="turn-indicator">
+            Current Turn : O
+        </h2>
+
+        <!-- Game -->
+
+        <div class="container">
+
+            <div class="game">
+
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+
+            </div>
+
+        </div>
+
+        <div class="buttons">
+
+            <button id="reset">
+                Reset Board
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
