@@ -7,7 +7,7 @@ A modern and responsive **Tic Tac Toe** game built using **HTML, CSS, and JavaSc
 ## 🌐 Live Demo
 
 ```text
-https://KaustubhDeshmane.github.io/Tic-Tac-Toe/
+https://kaustubhdeshmane.github.io/tic-tac-toe/
 ```
 
 ---
@@ -55,7 +55,7 @@ Tic-Tac-Toe/
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/KaustubhDeshmane/Tic-Tac-Toe.git
+git clone https://github.com/KaustubhDeshmane/tic-tac-toe.git
 ```
 
 ### Run the Project
